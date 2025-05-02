@@ -1,0 +1,17 @@
+{
+  "name": "ceramic_shop",
+  "version": "1.0.0",
+  "description": "a template of a ceramic shop site from figma design file",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "lawssn",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^6.3.4"
+  },
+  "dependencies": {
+    "sass": "^1.87.0"
+  }
+}
