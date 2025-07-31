@@ -5,6 +5,7 @@
 @use "/src/sass/base/basic.scss";
 @use "/src/sass/base/variables.scss" as *;
 @use "/src/sass/ui/pxtorem.scss";
+@use "/src/sass/base/animations.scss";
 
 @use "/src/sass/blocks/header.scss";
 
@@ -18,3 +19,5 @@
 @use "/src/sass/blocks/footer.scss";
 @use "/src/sass/blocks/catalog.scss";
 @use "/src/sass/blocks/blog.scss";
+@use "/src/sass/blocks/about.scss";
+@use "/src/sass/blocks/findus.scss";

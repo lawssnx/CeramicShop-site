@@ -1,5 +1,6 @@
 import Swiper from "swiper";
 import { Navigation, Pagination } from "swiper/modules";
+import JustValidate from "just-validate";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -58,4 +59,115 @@ try {
   });
 
   contents.forEach((c, i) => (c.style.display = i === 0 ? "flex" : "none"));
+} catch (e) {}
+
+try {
+  const validatorTouch = new JustValidate(".touch__form");
+
+  validatorTouch
+    .addField("#name", [
+      {
+        rule: "required",
+        errorMessage: "Please fill the name",
+      },
+      {
+        rule: "minLength",
+        value: 2,
+        errorMessage: "Minimum 2 chars!",
+      },
+    ])
+    .addField("#email", [
+      {
+        rule: "required",
+        errorMessage: "Please write your email",
+      },
+      {
+        rule: "email",
+        errorMessage: "Please write your email correctly",
+      },
+    ])
+    .addField(
+      "#question",
+      [
+        {
+          rule: "required",
+          errorMessage: "Where is your question?",
+        },
+        {
+          rule: "minLength",
+          value: 5,
+          errorMessage: "Min 5 chars, c-mon",
+        },
+      ],
+      {
+        errorsContainer: document
+          .querySelector("#question")
+          .parentElement.querySelector(".error-message"),
+      }
+    )
+    .addField(
+      "#checkbox",
+      [
+        {
+          rule: "required",
+        },
+      ],
+      {
+        errorsContainer: document
+          .querySelector("#checkbox")
+          .parentElement.parentElement.querySelector(".checkbox-error-message"),
+      }
+    )
+    .onSuccess((event) => {
+      const form = event.currentTarget;
+      const formData = new FormData(form);
+
+      fetch("https://httpbin.org/post", {
+        method: "POST",
+        body: formData,
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log("Success, ura!", data);
+          form.reset();
+        });
+    });
+} catch (e) {}
+
+try {
+  const validatorFooter = new JustValidate(".footer__form");
+
+  validatorFooter
+    .addField(
+      "#footer__email",
+      [
+        {
+          rule: "required",
+          errorMessage: "Please write your email",
+        },
+        {
+          rule: "email",
+          errorMessage: "Please write your email correctly",
+        },
+      ],
+      {
+        errorsContainer: document
+          .querySelector("#footer__email")
+          .parentElement.querySelector(".email-error-message"),
+      }
+    )
+
+    .addField(
+      "#footer__checkbox",
+      [
+        {
+          rule: "required",
+        },
+      ],
+      {
+        errorsContainer: document
+          .querySelector("#footer__checkbox")
+          .parentElement.parentElement.querySelector(".check-error-message"),
+      }
+    );
 } catch (e) {}
