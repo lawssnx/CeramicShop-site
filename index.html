@@ -8,6 +8,38 @@
       name="description"
       content=" Template of a ceramic shop site from figma design file"
     />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://metatags.io/" />
+    <meta
+      property="og:title"
+      content="Ceramic Soul | Artisanal Ceramics for a Cozy, Soulful Home"
+    />
+    <meta
+      property="og:description"
+      content="Elevate your space with artisanal ceramic pieces from Ceramic Soul. Aesthetic, functional, and made with love. Each item tells a story."
+    />
+    <meta
+      property="og:image"
+      content="https://chatgpt.com/s/m_688c03083cb081918052e453568ab793"
+    />
+
+    <!-- X (Twitter) -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://metatags.io/" />
+    <meta
+      property="twitter:title"
+      content="Ceramic Soul | Artisanal Ceramics for a Cozy, Soulful Home"
+    />
+    <meta
+      property="twitter:description"
+      content="Elevate your space with artisanal ceramic pieces from Ceramic Soul. Aesthetic, functional, and made with love. Each item tells a story."
+    />
+    <meta
+      property="twitter:image"
+      content="https://chatgpt.com/s/m_688c03083cb081918052e453568ab793"
+    />
+
     <title>Ceramic soul</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -31,15 +63,19 @@
             </div>
             <nav class="header__menu-nav">
               <ul>
-                <li><a href="#" class="header__menu-link">catalog</a></li>
-                <li><a href="#" class="header__menu-link">blog</a></li>
-                <li><a href="#" class="header__menu-link">about</a></li>
+                <li>
+                  <a href="/catalog" class="header__menu-link">catalog</a>
+                </li>
+                <li><a href="/blog" class="header__menu-link">blog</a></li>
+                <li>
+                  <a href="/about" class="header__menu-link">about</a>
+                </li>
               </ul>
             </nav>
           </div>
           <div class="header__top">
             <div class="burger"><span></span><span></span><span></span></div>
-            <a href="#" class="header__logo"
+            <a href="/index" class="header__logo"
               ><img src="/src/assets/logo/logo.png" alt="logo"
             /></a>
             <div class="header__icons">
@@ -49,9 +85,9 @@
           </div>
           <nav class="header__nav">
             <ul>
-              <li><a href="#" class="header__link">catalog</a></li>
-              <li><a href="#" class="header__link">blog</a></li>
-              <li><a href="#" class="header__link">about</a></li>
+              <li><a href="/catalog" class="header__link">catalog</a></li>
+              <li><a href="/blog" class="header__link">blog</a></li>
+              <li><a href="/about" class="header__link">about</a></li>
             </ul>
           </nav>
         </header>
@@ -238,8 +274,10 @@
               <h2 class="footer__header">discover</h2>
               <nav class="footer__nav">
                 <ul>
-                  <li class="footer__link"><a href="#">About Us</a></li>
-                  <li class="footer__link"><a href="#">Blog</a></li>
+                  <li class="footer__link">
+                    <a href="/about">About Us</a>
+                  </li>
+                  <li class="footer__link"><a href="/blog">Blog</a></li>
                 </ul>
               </nav>
             </div>
@@ -247,7 +285,9 @@
               <h2 class="footer__header">shopping</h2>
               <nav class="footer__nav">
                 <ul>
-                  <li class="footer__link"><a href="#">Catalog</a></li>
+                  <li class="footer__link">
+                    <a href="/catalog">Catalog</a>
+                  </li>
                 </ul>
               </nav>
             </div>
