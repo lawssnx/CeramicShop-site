@@ -16,7 +16,7 @@ Figma – Original source of design
 ## 🚀 How to Run
 
 https://lawssnx.github.io/CeramicShop-site/
-
+(not availibable now)
 ---
 
 ## 🤍 Designed & Built by lawssn
